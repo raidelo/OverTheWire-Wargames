@@ -51,3 +51,23 @@ bandit6-bandit7: [
     Steps 2:
         find / -size 33c -a -user bandit7 -a -group bandit6 2>/dev/null | xargs cat
 ] => morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+bandit7-bandit8: [
+    Steps:
+        cat data.txt | grep millionth
+] => dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+bandit8-bandit9: [
+    Steps:
+        cat data.txt  | sort | uniq -u
+] => 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+bandit9-bandit10: [
+    Steps:
+        strings data.txt | grep "=\{2,\}[^=].*"
+] => FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+bandit10-bandit11: [
+    Steps:
+        cat data.txt  | base64 -d
+] => dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
