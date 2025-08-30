@@ -75,4 +75,4 @@ bandit10-bandit11: [
 bandit11-bandit12: [
     Steps:
         cat data.txt | tr a-zA-Z n-za-mN-ZA-M
-] => 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+] => 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
