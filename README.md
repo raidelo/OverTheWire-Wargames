@@ -97,3 +97,20 @@ bandit12-bandit13: [
         gzip -d data8.bin.gz
         cat data8.bin
 ] => FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+bandit13-bandit14: [
+    Steps:
+        ssh bandit14@localhost -p 2220 -i sshkey.private
+        cat /etc/bandit_pass/bandit14
+] => MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+bandit14-bandit15: [
+    Steps:
+        echo MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS | nc localhost 30000
+] => 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+bandit15-bandit16: [
+    Steps:
+        openssl s_client localhost:30001
+        8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+] => kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
