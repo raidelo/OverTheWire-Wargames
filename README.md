@@ -79,21 +79,21 @@ bandit11-bandit12: [
 
 bandit12-bandit13: [
     Steps:
-cd /tmp
-mkdir tempdir
-cd tempdir
-cp ~/data.txt .
-xxd -r data.txt output
-mv output output.gz
-gzip -d output.gz
-bzip2 -d output
-mv output.out  output.out.gz
-gzip -d output.out.gz
-tar -f output.out -x
-tar -f data5.bin -x
-bzip2 -d data6.bin
-tar -xf data6.bin.out
-mv data8.bin data8.bin.gz
-gzip -d data8.bin.gz
-cat data8.bin
+        cd /tmp
+        mkdir tempdir
+        cd tempdir
+        cp ~/data.txt .
+        xxd -r data.txt output
+        mv output output.gz
+        gzip -d output.gz
+        bzip2 -d output
+        mv output.out  output.out.gz
+        gzip -d output.out.gz
+        tar -f output.out -x
+        tar -f data5.bin -x
+        bzip2 -d data6.bin
+        tar -xf data6.bin.out
+        mv data8.bin data8.bin.gz
+        gzip -d data8.bin.gz
+        cat data8.bin
 ] => FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
