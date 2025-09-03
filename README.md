@@ -114,3 +114,33 @@ bandit15-bandit16: [
         openssl s_client localhost:30001
         8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
 ] => kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+bandit16-bandit17: [
+    Steps:
+        nmap localhost -p 31000-32000 -Pn -n -sV
+        openssl s_client -ign_eof localhost:31790
+        kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+        [Copy private key]
+        cd /tmp
+        mkdir tempdir
+        cd tempdir
+        vim ssh_key.pem
+        [Paste Private Key]
+        chmod 400 ssh_key.pem
+        ssh bandit17@localhost -p 2220 -i ssh_key.pem
+        cat /etc/bandit_pass/bandit17
+] => EReVavePLFHtFlFsjn3hyzMlvSuSAcRD
+
+bandit17-bandit18: [
+    Steps:
+        diff passwords.old passwords.new
+] => x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+
+bandit18-bandit19: [
+    Steps 1:
+        [Before logging in => ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"] 
+
+    Steps 2:
+        [Before logging in => ssh bandit18@bandit.labs.overthewire.org -p 2220 -T] 
+        cat readme
+] => cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
