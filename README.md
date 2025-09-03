@@ -190,3 +190,16 @@ bandit23-bandit24: [
         [Wait 60 seconds or less]
         /tmp/tempfile
 ] => gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+
+bandit24-bandit25: [
+    Steps:
+        [Copy last level's password]
+        mkdir /tmp/tempdir
+        cd /tmp/tempdir
+        seq -w 0 9999
+        vim file
+        [Just opened VIM in normal mode. Press: ctrl+v G I]
+        [Just opened insert mode. Paste the last level's password and insert a space. Then press ESC. And then exit vim with: :x]
+        cat file | nc localhost 30002
+] => iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+
