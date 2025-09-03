@@ -143,4 +143,13 @@ bandit18-bandit19: [
     Steps 2:
         [Before logging in => ssh bandit18@bandit.labs.overthewire.org -p 2220 -T] 
         cat readme
+
+    Steps 3:
+        [Before logging in => ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat /etc/shells"]
+        Steps 3.1:
+            [Before logging in => ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/sh"]
+            cat readme
+        Steps 3.2:
+            [Before logging in => ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/dash"]
+            cat readme
 ] => cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
