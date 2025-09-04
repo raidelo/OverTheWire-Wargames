@@ -203,3 +203,26 @@ bandit24-bandit25: [
         cat file | nc localhost 30002
 ] => iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
 
+bandit25-bandit26: [
+    Steps:
+        [Make your terminal small in the Y axis, then log in with ssh]
+        [You should be in the interactive mode of the "more" program, reading the /home/bandit26/text.txt file]
+        [Press v to open the vi/vim editor. Press: :set shell=/bin/bash]
+        [Press: `:!bash`]
+        [Then to find the password of the current level (bandit26) you can execute `cat /etc/bandit_pass/bandit26` or directly press `:!cat /etc/bandit_pass/bandit26`]
+        [The step above isn't necesary since you'll face the same problem when logging with the password. You need to find the password of the next level in this bash you got.]
+] => s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
+
+bandit26-bandit27: [
+    Steps:
+        ./bandit27-do cat /etc/bandit_pass/bandit27
+] => upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+
+bandit27-bandit28: [
+    Steps:
+        mkdir /tmp/tempdir
+        cd /tmp/tempdir
+        git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+        cd repo
+        cat README
+] => Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
