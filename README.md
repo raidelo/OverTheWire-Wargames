@@ -226,3 +226,32 @@ bandit27-bandit28: [
         cd repo
         cat README
 ] => Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+
+bandit28-bandit29: [
+    Steps:
+        mkdir /tmp/tempdir
+        cd /tmp/tempdir
+        git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
+        cd repo
+        git log --oneline
+        git show 68314e0
+] => 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
+
+bandit29-bandit30: [
+    Steps:
+        mkdir /tmp/tempdir
+        cd /tmp/tempdir
+        git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+        cd repo
+        git checkout dev
+        cat README.md
+] => qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+
+bandit30-bandit31: [
+    Steps:
+        mkdir /tmp/tempdir
+        cd /tmp/tempdir
+        git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+        cd repo
+        git show secret
+] => fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
