@@ -224,7 +224,7 @@ bandit27-bandit28: [
         cd /tmp/tempdir
         git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
         cd repo
-        cat README
+        cat README.md
 ] => Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
 
 bandit28-bandit29: [
