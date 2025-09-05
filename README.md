@@ -255,3 +255,16 @@ bandit30-bandit31: [
         cd repo
         git show secret
 ] => fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+
+bandit31-bandit32: [
+    Steps:
+        mkdir /tmp/tempdir
+        cd /tmp/tempdir
+        git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo
+        cd repo
+        cat README.md
+        echo May I come in? > key.txt
+        git add key.txt
+        git commit -m "the asked file"
+        git push origin master
+] => 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
