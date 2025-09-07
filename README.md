@@ -21,7 +21,15 @@ bandit3-bandit4: [
 ] => 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
 bandit4-bandit5: [
-    Steps:
+    Steps 1:
+        file inhere/*
+        cat inhere/-file07
+
+    Steps 2:
+        find inhere -readable -a -type f | xargs file
+        cat inhere/-file07
+
+    Steps 3:
         python3
             >>> from pathlib import Path
             >>> for item in Path().iterdir():
