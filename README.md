@@ -268,3 +268,9 @@ bandit31-bandit32: [
         git commit -m "the asked file"
         git push origin master
 ] => 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+
+bandit32-bandit33: [
+    Steps:
+        $0
+        cat /etc/bandit_pass/bandit33
+] => tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
