@@ -2,4 +2,4 @@
 
 ## Summary
 
-- [Bandit](./bandit.md)
+- [Bandit](./src/bandit.md)
