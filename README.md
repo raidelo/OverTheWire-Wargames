@@ -3,3 +3,4 @@
 ## Summary
 
 - [Bandit](./src/bandit.md)
+- [Krypton](./src/krypton.md)
